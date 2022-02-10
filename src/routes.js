@@ -12,5 +12,8 @@ router.get('/room/:room', (req, res) => res.render('room'))
 
 router.post('/room/:room/:question/:action', QuestionController.index)
 router.post('/create-room', RoomController.create)
+router.get('/not-found', (req, res) =>
+  res.render('index', { page: 'not-found' })
+)
 
 module.exports = router
